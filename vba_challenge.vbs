@@ -32,10 +32,10 @@ Dim sheetnum As Long
 
 
 Dim openprice As Double
-Dim totalstockvolume As Double
+
 Dim closeprice As Double
 
-
+totalstockvolume = 0
 
 
 For sheetnum = 1 To Worksheets.Count
@@ -57,7 +57,7 @@ For sheetnum = 1 To Worksheets.Count
         If ActiveSheet.Cells(datarow, 1).Value <> ActiveSheet.Cells(datarow + 1, 1).Value Then
             ' Now at the edge
             ' add what is in Col g to the total stock counter
-            totalstockvolume = totalstockvolume + ActiveSheet.Cells(datarow, 8).Value
+            totalstockvolume = totalstockvolume + ActiveSheet.Cells(datarow, 7).Value
             ' grab the closing price from Col F
             closeprice = ActiveSheet.Cells(datarow, 6).Value
 
